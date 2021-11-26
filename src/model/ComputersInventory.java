@@ -96,7 +96,7 @@ public class ComputersInventory {
 		int exists=compVerify(reference);
 		if(exists!=-1){
 			if(computersList[exists]!=null){
-				if(computersList[exists].getReference()==reference && computersList[exists] instanceof DesktopComputer) {
+				if(computersList[exists].getReference().equalsIgnoreCase(reference) && computersList[exists] instanceof DesktopComputer) {
 					computersList[exists]=null;
 					message="The computer: "+reference+" has been deleted";
 				}
